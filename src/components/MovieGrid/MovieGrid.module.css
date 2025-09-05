@@ -1,0 +1,76 @@
+﻿/* components/MovieGrid.module.css */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.emptyState {
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.emptyIcon {
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emoji {
+  font-size: 2.25rem;
+}
+
+.emptyTitle {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  color: #171717;
+}
+
+.emptyDescription {
+  color: #6b7280;
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .emptyIcon {
+    background-color: #374151;
+  }
+  
+  .emptyTitle {
+    color: #ffffff;
+  }
+  
+  .emptyDescription {
+    color: #9ca3af;
+  }
+}

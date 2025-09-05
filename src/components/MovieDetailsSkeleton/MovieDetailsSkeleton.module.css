@@ -1,0 +1,470 @@
+﻿/* components/MovieDetailsSkeleton.module.css */
+.minHScreen {
+  min-height: 100vh;
+}
+
+.heroSection {
+  position: relative;
+  min-height: 60vh;
+  overflow: hidden;
+  background-color: #f8fafc;
+}
+
+.backgroundSkeleton {
+  position: absolute;
+  inset: 0;
+  background-color: #e5e7eb;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.backButtonSkeleton {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 20;
+}
+
+.skeletonButton {
+  height: 2.5rem;
+  width: 6rem;
+  background-color: #e5e7eb;
+  border-radius: 0.375rem;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 100%;
+  min-height: 60vh;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 2rem;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: end;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.posterSkeleton {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .posterSkeleton {
+    grid-column: span 3 / span 3;
+    justify-content: flex-start;
+  }
+}
+
+.posterPlaceholder {
+  width: 16rem;
+  height: 24rem;
+  background-color: #e5e7eb;
+  border-radius: 1rem;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@media (min-width: 1024px) {
+  .posterPlaceholder {
+    width: 20rem;
+    height: 480px;
+  }
+}
+
+.infoSkeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .infoSkeleton {
+    grid-column: span 9 / span 9;
+    text-align: left;
+  }
+}
+
+.titleSkeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.titleLine1 {
+  height: 3rem;
+  background-color: #e5e7eb;
+  border-radius: 0.375rem;
+  width: 75%;
+  margin: 0 auto;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.titleLine2 {
+  height: 1.5rem;
+  background-color: #e5e7eb;
+  border-radius: 0.375rem;
+  width: 50%;
+  margin: 0 auto;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@media (min-width: 1024px) {
+  .titleLine1,
+  .titleLine2 {
+    margin: 0;
+  }
+  
+  .titleLine1 {
+    height: 4rem;
+  }
+  
+  .titleLine2 {
+    height: 2rem;
+  }
+}
+
+.metadataSkeleton {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .metadataSkeleton {
+    justify-content: flex-start;
+  }
+}
+
+.metadataItem {
+  height: 2.5rem;
+  width: 6rem;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.certificationSkeleton {
+  height: 2rem;
+  width: 3rem;
+  background-color: #e5e7eb;
+  border-radius: 0.375rem;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.genresSkeleton {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .genresSkeleton {
+    justify-content: flex-start;
+  }
+}
+
+.genreItem {
+  height: 1.5rem;
+  width: 4rem;
+  background-color: #e5e7eb;
+  border-radius: 0.375rem;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.buttonsSkeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .buttonsSkeleton {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .buttonsSkeleton {
+    justify-content: flex-start;
+  }
+}
+
+.buttonSkeleton {
+  height: 3rem;
+  background-color: #e5e7eb;
+  border-radius: 0.375rem;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.buttonSkeleton:nth-child(1) {
+  width: 12rem;
+}
+
+.buttonSkeleton:nth-child(2) {
+  width: 14rem;
+}
+
+.detailsSection {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .detailsGrid {
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+  }
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.synopsisSkeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sectionTitle {
+  height: 2rem;
+  width: 8rem;
+  background-color: #e5e7eb;
+  border-radius: 0.375rem;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.synopsisText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.textLine {
+  height: 1.5rem;
+  background-color: #e5e7eb;
+  border-radius: 0.375rem;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.textLine:nth-child(2) {
+  width: 83.333333%;
+}
+
+.textLine:nth-child(3) {
+  width: 66.666667%;
+}
+
+.castSkeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.castGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .castGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.actorCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.actorImage {
+  width: 100%;
+  aspect-ratio: 2/3;
+  background-color: #e5e7eb;
+  border-radius: 0.5rem;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.actorName {
+  height: 1rem;
+  background-color: #e5e7eb;
+  border-radius: 0.25rem;
+  width: 75%;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.actorCharacter {
+  height: 0.75rem;
+  background-color: #e5e7eb;
+  border-radius: 0.25rem;
+  width: 50%;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.infoCard {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebarTitle {
+  height: 1.5rem;
+  background-color: #e5e7eb;
+  border-radius: 0.375rem;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.infoLabel {
+  height: 1rem;
+  background-color: #e5e7eb;
+  border-radius: 0.25rem;
+  width: 5rem;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.infoText {
+  height: 1rem;
+  background-color: #e5e7eb;
+  border-radius: 0.25rem;
+  width: 8rem;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.companiesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.companyItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.companyLogo {
+  width: 2rem;
+  height: 2rem;
+  background-color: #e5e7eb;
+  border-radius: 0.25rem;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.companyInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.companyName {
+  height: 1rem;
+  background-color: #e5e7eb;
+  border-radius: 0.25rem;
+  width: 6rem;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.companyCountry {
+  height: 0.75rem;
+  background-color: #e5e7eb;
+  border-radius: 0.25rem;
+  width: 2rem;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .heroSection {
+    background-color: #0f172a;
+  }
+  
+  .backgroundSkeleton,
+  .skeletonButton,
+  .posterPlaceholder,
+  .titleLine1,
+  .titleLine2,
+  .metadataItem,
+  .certificationSkeleton,
+  .genreItem,
+  .buttonSkeleton,
+  .sectionTitle,
+  .textLine,
+  .actorImage,
+  .actorName,
+  .actorCharacter,
+  .sidebarTitle,
+  .infoLabel,
+  .infoText,
+  .companyLogo,
+  .companyName,
+  .companyCountry {
+    background-color: #374151;
+  }
+  
+  .infoCard {
+    background-color: rgba(30, 30, 30, 0.5);
+  }
+}
