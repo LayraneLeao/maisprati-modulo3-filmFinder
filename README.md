@@ -75,10 +75,10 @@ filmfinder/
 
 ### Instalação
 1. Clone o repositório
-   ```
+```
     git clone https://github.com/seu-usuario/filmfinder.git
     cd filmfinder
-   ```
+```
 
 2. Instale as dependências
 ```
